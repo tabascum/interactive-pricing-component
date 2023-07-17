@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Manrope", sans-serif;
+  background: hsl(230, 100%, 99%) url("../../images/bg-pattern.svg") top no-repeat;
+  background-size: contain;
+  color: hsl(225, 20%, 60%);
+}
+
+.main-wrapper {
+  border: 1px solid black;
+  max-height: 90vh;
+  width: 45rem;
+  padding: 2rem;
+}
+.main-wrapper .header {
+  background: url("../../images/pattern-circles.svg") center no-repeat;
+  background-size: contain;
+  text-align: center;
+  padding-block: 2rem;
+  margin-block-end: 2rem;
+}
+.main-wrapper .header h1 {
+  color: hsl(227, 35%, 25%);
+  margin-block-end: 1rem;
+}
+.main-wrapper .content-wrapper {
+  background-color: hsl(0, 0%, 100%);
+  padding: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0.1rem 0.6rem 0.6rem hsl(224, 65%, 95%);
+}
+.main-wrapper .content-wrapper .content-container > :first-child > :first-child {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+.main-wrapper .content-wrapper .content {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 2rem;
+}
+.main-wrapper .content-wrapper .content-range {
+  width: 100%;
+  padding-block: 2rem;
+  text-align: center;
+}
+.main-wrapper .content-wrapper .content-range .slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 0.5rem; /* Specified height */
+  background-color: hsl(224, 65%, 95%); /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  border-radius: 1rem;
+}
+.main-wrapper .content-wrapper .content-range .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  border: 0;
+  background: hsl(174, 86%, 45%) url("../../images/icon-slider.svg") center no-repeat;
+  cursor: pointer;
+  box-shadow: -0.1rem 0.4rem 0.5rem 0.6rem hsl(174, 77%, 80%);
+}
+.main-wrapper .content-wrapper .content-range .slider::-moz-range-thumb {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  background: url("../../images/icon-slider.svg") center no-repeat;
+  cursor: pointer;
+}
+.main-wrapper .content-cta {
+  padding-block: 2rem;
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=styles.css.map */
