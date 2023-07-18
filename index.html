@@ -23,31 +23,38 @@
     <section class="content-wrapper">
       <section class="content-container">
         <div class="content">
-          <p>100k Pageviews</p>
-          <p>16.00$ /month</p>
+          <p id="views">100k Pageviews</p>
+          <p><span id="price">16.00$</span> /month</p>
         </div>
 
-        <div class="content-range">
-          <input type="range" min="1" max="100" value="50" class="slider" id="">
+        <div class="slider-wrapper">
+          <input class="slider" type="range" min="1" max="100" value="50" id="s">
         </div>
-
-
 
         <div class="content">
           <p> Monthly Billing</p>
-          <p> Yearly Billing <span>25% discount</span></p>
+          <p> Yearly Billing <span class="discount">25% discount</span></p>
         </div>
 
       </section>
 
-      <section class="content-cta content">
-        <div>
-          <p> <img src="./images/icon-check.svg" alt="green check icon"> Unlimited websites</p>
-          <p> <img src="./images/icon-check.svg" alt="green check icon"> 100% data ownership</p>
-          <p> <img src="./images/icon-check.svg" alt="green check icon"> Email reports</p>
+      <section class="cta-wrapper">
+        <div class="cta-content">
+          <span>
+            <img src="./images/icon-check.svg" alt="green check icon">
+            <p>Unlimited websites</p>
+          </span>
+          <span>
+            <img src="./images/icon-check.svg" alt="green check icon">
+            <p>100% data ownership</p>
+          </span>
+          <span>
+            <img src="./images/icon-check.svg" alt="green check icon">
+            <p>Email reports</p>
+          </span>
         </div>
 
-        <button class="cta">Start my trial</button>
+        <button class="cta-button">Start my trial</button>
       </section>
     </section>
   </main>
