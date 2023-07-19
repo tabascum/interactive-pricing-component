@@ -27,10 +27,8 @@ slider.addEventListener("input", () => {
 billingSwitch.addEventListener("change", () => {
   if (yearly != true) {
     yearly = true;
-    yearlyPrice.innerHTML = `$` + monthlyPrice[inputValue] * 0.75 + `.00 `;
   } else {
     yearly = false;
-    price.innerHTML = `\$${monthlyPrice[inputValue]}.00`;
   }
   updateValue();
 });
