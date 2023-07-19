@@ -45,7 +45,7 @@ Users should be able to:
 ### Useful resources
 
 - [How to - Range Sliders ](https://www.w3schools.com/howto/howto_js_rangeslider.asp) - This helped figure out how to style a slider and to display the range value.
-- [Interactive Pricing Component](https://codepen.io/iamsofiullah/pen/yLbmMow) - Thanks to Sofiullah Chowdhury approach to this challenge, I could pick the input value and link it to the provided values.
+- [Interactive Pricing Component](https://codepen.io/iamsofiullah/pen/yLbmMow) - Thanks to Sofiullah Chowdhury's approach to this challenge, I could adapt the logic I was following to achieve a better result.
 
 ## Author
 

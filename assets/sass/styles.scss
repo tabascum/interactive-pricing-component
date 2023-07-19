@@ -18,11 +18,15 @@ body {
   width: 40rem;
   padding: 2rem;
 
+  @media (max-width: 550px) {
+    padding: 1rem;
+  }
+
   .header {
     background: url("../../images/pattern-circles.svg") center no-repeat;
     background-size: contain;
     text-align: center;
-    padding-block: 2rem;
+    padding-block: 1.5rem;
     margin-block-end: 2rem;
 
     @media (max-width: 550px) {
@@ -60,7 +64,7 @@ body {
 
       @media (max-width: 550px) {
         text-align: center;
-        padding: 1rem 2rem;
+        padding: 1rem 1.5rem;
       }
     }
 
@@ -71,9 +75,8 @@ body {
       padding-block: 2rem;
       font-size: base.$text;
 
-      @media (max-width: 550) {
-        display: inline-flex;
-        text-align: center;
+      @media (max-width: 550px) {
+        justify-content: center;
       }
 
       :nth-child(2) {
