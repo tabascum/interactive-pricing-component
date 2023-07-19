@@ -210,7 +210,6 @@ body {
 }
 .main-wrapper .content-wrapper .billing {
   justify-content: center;
-  margin-inline-start: 2rem;
   gap: 1rem;
 }
 .main-wrapper .content-wrapper .billing .bill-discount {
@@ -221,15 +220,22 @@ body {
   background-color: hsl(14, 92%, 95%);
   font-size: 0.8rem;
   padding: 0.2rem 0.3rem;
+  text-align: center;
   border-radius: 1rem;
   gap: 0.4rem;
 }
+.main-wrapper .content-wrapper .billing .bill-discount :first-child {
+  display: none;
+}
 @media (max-width: 550px) {
-  .main-wrapper .content-wrapper .billing {
+  .main-wrapper .content-wrapper .billing .bill-discount {
     margin: 0;
     gap: 0.5rem;
   }
-  .main-wrapper .content-wrapper .billing .discount {
+  .main-wrapper .content-wrapper .billing .bill-discount :first-child {
+    display: flex;
+  }
+  .main-wrapper .content-wrapper .billing .bill-discount .discount {
     display: none;
   }
 }
