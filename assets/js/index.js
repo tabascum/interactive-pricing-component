@@ -10,35 +10,31 @@ const billingSwitch = document.querySelector("#billing");
 let yearly = false;
 
 slider.addEventListener("input", () => {
-  let inputValue = slider.value;
-
-  updateValue(yearly, inputValue);
-  views.innerHTML = pageViews[inputValue] + ` Pageviews`;
-
-  let value = inputValue * 25;
+  const inputValue = slider.value;
+  const value = inputValue * 25;
 
   slider.style.background = `linear-gradient(to right,
-            hsl(174, 77%, 80%) 0%,
-            hsl(174, 77%, 80%) ${value}%,
-            hsl(224, 65%, 95%) 0%,
-            hsl(224, 65%, 95%) 100%)`;
+    hsl(174, 77%, 80%) 0%,
+    hsl(174, 77%, 80%) ${value}%,
+    hsl(224, 65%, 95%) 0%,
+    hsl(224, 65%, 95%) 100%)`;
+
+  updateValue(yearly, inputValue);
+  views.innerHTML = `${pageViews[inputValue]} Pageviews`;
 });
 
 billingSwitch.addEventListener("change", () => {
-  if (yearly != true) {
-    yearly = true;
-  } else {
-    yearly = false;
-  }
-  updateValue();
+  yearly = !yearly; // Toggle yearly
+
+  updateValue(yearly, slider.value);
 });
 
 function updateValue(yearly, inputValue) {
-  if (yearly) {
-    price.innerHTML = `$` + monthlyPrice[inputValue] * 0.75 + `.00 `;
-    yearlyPrice.innerHTML = `$` + monthlyPrice[inputValue] * 0.75 + `.00 `;
-  } else {
-    price.innerHTML = `\$${monthlyPrice[inputValue]}.00`;
-    yearlyPrice.innerHTML = `\$${monthlyPrice[inputValue]}.00`;
-  }
+  const selectedPrice = yearly
+    ? monthlyPrice[inputValue] * 0.75
+    : monthlyPrice[inputValue];
+  const formattedPrice = `$${selectedPrice.toFixed(2)}`;
+
+  price.innerHTML = formattedPrice;
+  yearlyPrice.innerHTML = formattedPrice;
 }
