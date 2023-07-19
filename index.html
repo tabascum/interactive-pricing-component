@@ -17,23 +17,26 @@
   <main class="main-wrapper">
     <header class="header">
       <h1>Simple, traffic-based pricing</h1>
-      <p>Sign-up for our 30-day trial. No credit card required.</p>
+      <div>
+        <p>Sign-up for our 30-day trial.</p>
+        <p>No credit card required.</p>
+      </div>
     </header>
 
     <section class="content-wrapper">
       <section class="content-container">
         <div class="content">
           <p id="views">100k Pageviews</p>
-          <p class="monthly"><span id="price">16.00$</span> / month</p>
+          <p class="monthly"><span id="price">$16.00</span> / month</p>
         </div>
 
         <div class="slider-wrapper">
           <input class="slider" type="range" min="0" max="4" value="2" id="slider">
         </div>
 
-        <!--         <div class="content">
-          <p class="yearly"><span id="price">12.00$</span> / month</p>
-        </div> -->
+        <div class="content-yearly">
+          <p class="yearly"><span id="yearly-price">$12.00</span> / month</p>
+        </div>
 
 
         <div class="content billing">
@@ -42,7 +45,11 @@
             <input type="checkbox" name="billing" id="billing">
             <span class="toggle-slider"></span>
           </label>
-          <p> Yearly Billing <span class="discount">25% <!-- discount --></span></p>
+          <p> Yearly Billing</p>
+          <div class="bill-discount">
+            <p>25%</p>
+            <p class="discount">discount</p>
+          </div>
         </div>
 
       </section>

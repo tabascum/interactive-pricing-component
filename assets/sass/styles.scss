@@ -1,7 +1,7 @@
 @use "base";
 
 body {
-  width: 100vw;
+  min-width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -14,7 +14,7 @@ body {
 }
 
 .main-wrapper {
-  max-height: 90vh;
+  max-height: 100vh;
   width: 40rem;
   padding: 2rem;
 
@@ -34,9 +34,17 @@ body {
       margin-block-end: 1rem;
 
       @media (max-width: 550px) {
-        p {
-          flex-wrap: wrap;
-        }
+        font-size: 1.5rem;
+      }
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+      gap: 0.2rem;
+
+      @media (max-width: 550px) {
+        flex-direction: column;
       }
     }
   }
@@ -49,6 +57,11 @@ body {
     .content-container {
       padding: 1.5rem 3rem;
       border-block-end: 0.1rem solid base.$light-grayish-blue;
+
+      @media (max-width: 550px) {
+        text-align: center;
+        padding: 1rem 2rem;
+      }
     }
 
     .content {
@@ -57,6 +70,11 @@ body {
       align-items: center;
       padding-block: 2rem;
       font-size: base.$text;
+
+      @media (max-width: 550) {
+        display: inline-flex;
+        text-align: center;
+      }
 
       :nth-child(2) {
         display: flex;
@@ -75,12 +93,32 @@ body {
         color: base.$dark-desaturated-blue;
       }
 
-      .discount {
-        font-size: 0.8rem;
-        padding: 0 0.3 rem;
-        border-radius: 1rem;
-        color: base.$light-red;
-        background-color: base.$light-grayish-red;
+      .monthly {
+        @media (max-width: 550px) {
+          display: none;
+        }
+      }
+    }
+
+    .content-yearly {
+      display: none;
+      padding-block: 2rem;
+
+      .yearly {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      #yearly-price {
+        font-size: 2.5rem;
+        font-weight: base.$fw-bolder;
+        color: base.$dark-desaturated-blue;
+      }
+
+      @media (max-width: 550px) {
+        display: block;
       }
     }
 
@@ -149,8 +187,8 @@ body {
 
     .switch {
       display: inline-block;
-      width: 2.8rem;
-      height: 1.3rem;
+      width: 45px;
+      height: 20px;
       position: relative;
       cursor: pointer;
     }
@@ -174,8 +212,8 @@ body {
       content: "";
       position: absolute;
       background-color: #fff;
-      height: 0.92rem;
-      width: 0.9rem;
+      height: 14px;
+      width: 14px;
       border-radius: 50%;
       left: 3px;
       top: 3px;
@@ -191,9 +229,25 @@ body {
       margin-inline-start: 2rem;
       gap: 1rem;
 
+      .bill-discount {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: base.$light-red;
+        background-color: base.$light-grayish-red;
+        font-size: 0.8rem;
+        padding: 0.2rem 0.3rem;
+        border-radius: 1rem;
+        gap: 0.4rem;
+      }
+
       @media (max-width: 550px) {
         margin: 0;
         gap: 0.5rem;
+
+        .discount {
+          display: none;
+        }
       }
     }
   }
@@ -230,6 +284,7 @@ body {
 
       @media (max-width: 550px) {
         align-items: center;
+        margin-block: 1rem;
       }
     }
 
@@ -241,6 +296,10 @@ body {
       cursor: pointer;
       border: none;
       font-weight: base.$fw-bold;
+
+      @media (max-width: 550px) {
+        margin-block-end: 1rem;
+      }
     }
 
     .cta-button:hover {
